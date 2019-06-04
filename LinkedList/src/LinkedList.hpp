@@ -7,12 +7,17 @@ class LinkedList
 {
   public:
     LinkedList();
+    ~LinkedList();
     void addToHead(int data);
     std::vector<int> toList();
   private:
     class Node {
       public:
-        Node(int data, Node * next = nullptr);
+        Node(int data, Node * next = nullptr)
+        {
+          this->data = data;
+          this->next = next;
+        }
         Node * next;
         int data;
     };

@@ -9,6 +9,8 @@ class LinkedList
     LinkedList();
     ~LinkedList();
     void addToHead(int data);
+    void addToTail(int data);
+
     std::vector<int> toList();
   private:
     class Node {

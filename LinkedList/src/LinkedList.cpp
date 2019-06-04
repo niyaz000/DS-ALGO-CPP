@@ -29,3 +29,16 @@ std::vector<int> LinkedList::toList()
   }
   return vec;
 }
+
+void LinkedList::addToTail(int data)
+{
+  if(this->head == nullptr) {
+    return this->addToHead(data);
+  }
+  Node * temp = this->head;
+  while(temp->next != nullptr) {
+    temp = temp->next;
+  }
+  temp->next = new LinkedList::Node(data, nullptr);
+}
+

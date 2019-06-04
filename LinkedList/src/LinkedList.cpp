@@ -42,3 +42,13 @@ void LinkedList::addToTail(int data)
   temp->next = new LinkedList::Node(data, nullptr);
 }
 
+void LinkedList::clear()
+{
+  Node * temp = this->head;
+  while(temp != nullptr) {
+    Node * t = temp;
+    temp = temp->next;
+    delete temp;
+  }
+  this->head = nullptr;
+}
